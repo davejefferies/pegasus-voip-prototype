@@ -1,0 +1,20 @@
+[Unit]
+Description=Kamailio
+After=network.target
+After=multi-user.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+LimitCORE=infinity
+LimitNOFILE=65535
+PIDFile=/run/kamailio-%i.pid
+EnvironmentFile=/etc/default/kamailio-%i
+ExecStart=/usr/local/sbin/kamailio -A IP=%i -f /etc/kamailio/%i/kamailio.cfg -m ${SH_MEM} -M ${PRIV_MEM} -P /run/kamailio-%i.pid
+ExecStopPost=/bin/rm -f /var/run/kamailio-%i.pid
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+

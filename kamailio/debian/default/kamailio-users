@@ -1,0 +1,5 @@
+# Shared Memory size in MB
+SH_MEM=256
+
+# Private Memory size in MB
+PRIV_MEM=256
