@@ -1,0 +1,7 @@
+[Service]
+Type=simple
+ExecStart=/opt/agi/bin/phpagi-fastagi.php
+User=root
+Group=root
+StandardInput=socket
+StandardOutput=socket

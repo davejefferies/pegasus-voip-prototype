@@ -1,0 +1,10 @@
+acl trusted {
+	localhost;
+	localnets;
+};
+
+zone "pegasus.local" {
+	type master;
+	file "/etc/bind/db.pegasus.local";
+};
+

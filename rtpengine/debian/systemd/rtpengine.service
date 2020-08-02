@@ -1,0 +1,18 @@
+[Unit]
+Description=RTPEngine Mediaproxy
+After=network.target netfilter-persistent.service
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/default/rtpengine
+PIDFile=/var/run/rtpengine.pid
+ExecStartPre=/usr/sbin/ngcp-rtpengine-iptables-setup start
+ExecStart=/usr/sbin/rtpengine --table=0 --interface=${AUDIO_SOCK} --listen-ng=${CONTROL_SOCK} --listen-cli=127.0.0.1:9900 --xmlrpc-format=1 --b2b-url=http://users.olympus.local:8000/RPC2 --tos=184 --pidfile=/var/run/rtpengine.pid --no-fallback --sip-source --recording-dir=${RECORDINGS_SPOOL} --recording-method=proc $EXTRA_OPTS
+ExecStartPre=/usr/sbin/ngcp-rtpengine-iptables-setup stop
+ExecStartPost=/usr/sbin/ngcp-rtpengine-iptables-setup stop
+ExecStopPost=/usr/sbin/ngcp-rtpengine-iptables-setup stop
+ExecStopPost=/bin/bash -c "/bin/echo del 0 > /proc/rtpengine/control"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
