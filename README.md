@@ -34,7 +34,7 @@ VER=1.0.4<br/>
 curl https://codeload.github.com/BelledonneCommunications/bcg729/tar.gz/$VER >bcg729_$VER.orig.tar.gz<br/>
 tar zxf bcg729_$VER.orig.tar.gz<br/>
 cd bcg729-$VER<br/>
-git clone https://github.com/ossobv/bcg729-deb.git debian<br/>
+git clone https://github.com/ossobv/bcg729-%2A.deb.git debian<br/>
 dpkg-buildpackage -us -uc -sa<br/>
 cd ../<br/>
 dpkg -i libbcg729-&#2a;.deb<br/>
