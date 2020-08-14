@@ -42,3 +42,9 @@ dpkg-checkbuilddeps<br/>
 dpkg-buildpackage<br/>
 cd ../<br/>
 dpkg -i ngcp-rtpengine-daemon_\*.deb ngcp-rtpengine-iptables_\*.deb ngcp-rtpengine-kernel-dkms_\*.deb<br/>
+<br/>
+Delete ngcp-rtpengine-daemon.system<br/>
+copy default and system file<br/>
+systemctl daemon-reload<br/>
+systemctl start rtpengine<br/>
+systemctl enable rtpengine<br/>
