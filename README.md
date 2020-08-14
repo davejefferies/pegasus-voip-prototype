@@ -41,4 +41,4 @@ dpkg -i libbcg729-\*.deb<br/>
 dpkg-checkbuilddeps<br/>
 dpkg-buildpackage<br/>
 cd ../<br/>
-dpkg -i ngcp-rtpengine-daemon_*.deb ngcp-rtpengine-iptables_*.deb ngcp-rtpengine-kernel-dkms_*.deb<br/>
+dpkg -i ngcp-rtpengine-daemon_\*.deb ngcp-rtpengine-iptables_\*.deb ngcp-rtpengine-kernel-dkms_\*.deb<br/>
