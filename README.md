@@ -18,7 +18,7 @@ enable bind9: systemctl enable bind9<br/>
 edit resolv.conf:<br/>
 /usr/bin/chattr -i /etc/resolv.conf<br/>
 /bin/cat > /etc/resolv.conf <<- EOM<br/>
-# THIS FILE IS AUTO-GENERATED. DO NOT EDIT MANUALLY.<br/>
+&#35; THIS FILE IS AUTO-GENERATED. DO NOT EDIT MANUALLY.<br/>
 domain pegasus.local<br/>
 search pegasus.local<br/>
 nameserver 127.0.0.1<br/>
