@@ -37,7 +37,7 @@ cd bcg729-$VER<br/>
 git clone https://github.com/ossobv/bcg729-deb.git debian<br/>
 dpkg-buildpackage -us -uc -sa<br/>
 cd ../<br/>
-dpkg -i libbcg729-\*.deb<br/>
+dpkg -i libbcg729-&#2a;.deb<br/>
 dpkg-checkbuilddeps<br/>
 dpkg-buildpackage<br/>
 cd ../<br/>
