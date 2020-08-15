@@ -62,3 +62,8 @@ nano src/modules.lst<br/>
 include_modules = db_mysql tls dialplan dmq xmlops regex websocket json jansson pua pua_dialoginfo presence presence_xml presence_dialoginfo ndb_redis<br/>
 make all<br/>
 make install<br/>
+<br/>
+<br/>
+Asterisk:<br/>
+apt install build-essential<br/>
+apt install gcc wget g++ make patch libedit-dev uuid-dev  libxml2-dev libsqlite3-dev openssl libssl-dev bzip2<br/>
