@@ -73,3 +73,4 @@ cd asterisk-17.1.0/<br/>
 ./configure  --with-jansson-bundled<br/>
 make menuselect<br/>
 make && make install<br/>
+contrib/scripts/get_mp3_source.sh<br/>
