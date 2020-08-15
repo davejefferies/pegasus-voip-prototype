@@ -48,3 +48,17 @@ copy default and system file<br/>
 systemctl daemon-reload<br/>
 systemctl start rtpengine<br/>
 systemctl enable rtpengine<br/>
+<br/>
+<br/>
+Kamailio<br/>
+apt install git gcc g++ flex bison libmysqlclient-dev make autoconf pkg-config libssl-dev libcurl4-openssl-dev libxml2-dev libpcre3-dev libunistring-dev libjson-c-dev libjansson-dev<br/>
+mkdir -p /usr/local/src/kamailio-5.4<br/>
+cd /usr/local/src/kamailio-5.4<br/>
+git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio<br/>
+cd kamailio<br/>
+git checkout -b 5.4 origin/5.4<br/>
+make cfg<br/>
+nano src/modules.lst<br/>
+include_modules = db_mysql tls dialplan dmq xmlops regex websocket json jansson pua pua_dialoginfo presence presence_xml presence_dialoginfo ndb_redis<br/>
+make all<br/>
+make install<br/>
