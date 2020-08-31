@@ -76,4 +76,4 @@ make && make install<br/>
 contrib/scripts/get_mp3_source.sh<br/>
 
 
-After Asterisk install G729 codec
+After Asterisk install G729 codec for asterisk to translate the streams from RTPEngine as they utilise G729 codec.  Also install the opus codec.
