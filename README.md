@@ -74,6 +74,11 @@ cd asterisk-17.1.0/<br/>
 make menuselect<br/>
 make && make install<br/>
 contrib/scripts/get_mp3_source.sh<br/>
-
-
+<br/>
+Install G729 for Asterisk Translation:<br/>
+wget http://asterisk.hosting.lv/bin/codec_g729-ast170-gcc4-glibc-x86_64-core2.so
+cp codec_g729-ast170-gcc4-glibc-x86_64-core2.so /usr/lib/asterisk/modules/codec_g729.so<br/>
+chmod  +x /usr/lib/asterisk/modules/codec_g729.so<br/>
+asterisk -rx "module load codec_g729.so"<br/>
+systemctl restart asterisk<br/>
 After Asterisk install G729 codec for asterisk to translate the streams from RTPEngine as they utilise G729 codec.  Also install the opus codec.
