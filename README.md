@@ -74,3 +74,6 @@ cd asterisk-17.1.0/<br/>
 make menuselect<br/>
 make && make install<br/>
 contrib/scripts/get_mp3_source.sh<br/>
+
+
+After Asterisk install G729 codec
