@@ -81,4 +81,14 @@ cp codec_g729-ast170-gcc4-glibc-x86_64-core2.so /usr/lib/asterisk/modules/codec_
 chmod  +x /usr/lib/asterisk/modules/codec_g729.so<br/>
 asterisk -rx "module load codec_g729.so"<br/>
 systemctl restart asterisk<br/>
-After Asterisk install G729 codec for asterisk to translate the streams from RTPEngine as they utilise G729 codec.  Also install the opus codec.
+<br/>
+Install Opus Codec for Asterisk<br/>
+wget http://downloads.digium.com/pub/telephony/codec_opus/asterisk-17.0/x86-64/codec_opus-17.0_current-x86_64.tar.gz<br/>
+tar -zxvf codec_opus-17.0_current-x86_64.tar.gz<br/>
+cd codec_opus-17.0_current-x86_64<br/>
+cp codec_opus.so /usr/lib/asterisk/modules/<br/>
+cp codec_opus_config-en_US.xml /var/lib/asterisk/documentation/thirdparty<br/>
+asterisk -rvvvv<br/>
+core restart now<br/>
+asterisk -rvvvv<br/>
+core reload<br/>
