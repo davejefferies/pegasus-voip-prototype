@@ -1,0 +1,11 @@
+dialplan_extensions:
+    path: Pegasus/Gateway/Dialplan/Extensions
+    controller: Pegasus\Gateway\Dialplan\Extensions::run
+  
+dialplan_headers:
+    path: Pegasus/Gateway/Dialplan/Headers
+    controller: Pegasus\Gateway\Dialplan\Headers::run
+
+dialplan_hangup:
+    path: Pegasus/Gateway/Dialplan/Hangup
+    controller: Pegasus\Gateway\Dialplan\Hangup::run

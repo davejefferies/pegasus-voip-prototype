@@ -1,0 +1,29 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+    
+    fastagi:
+        synthetic: true 
+
+    Pegasus\Gateway\Repository\:
+        resource: '../src/Repository/*'
+        lazy: true
+        arguments:
+            - '@doctrine'
+    
+    Pegasus\Gateway\Agi\Wrapper:
+        lazy: true
+        arguments:
+            $fastagi: '@fastagi'
+            $colorizer: '@Pegasus\Gateway\Agi\Colorizer'
+  
+    Pegasus\Gateway\Agi\Colorizer:
+        arguments: ~
+    
+    Pegasus\Gateway\Action\:
+        resource: '../src/Action/*'
+    
+    Pegasus\Gateway\Dialplan\:
+        resource: '../src/Dialplan/*'
