@@ -65,7 +65,7 @@ make install<br/>
 <br/>
 <br/>
 Asterisk:<br/>
-apt install build-essential<br/>
+apt install build-essential festival<br/>
 apt install gcc wget g++ make patch libedit-dev uuid-dev  libxml2-dev libsqlite3-dev openssl libssl-dev bzip2 libedit-dev<br/>
 cd /usr/src/ && wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-17-current.tar.gz<br/>
 tar -xzvf asterisk-17-current.tar.gz<br/>
