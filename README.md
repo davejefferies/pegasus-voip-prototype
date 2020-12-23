@@ -76,7 +76,7 @@ make && make install<br/>
 contrib/scripts/get_mp3_source.sh<br/>
 <br/>
 Install G729 for Asterisk Translation:<br/>
-wget http://asterisk.hosting.lv/bin/codec_g729-ast170-gcc4-glibc-x86_64-core2.so
+wget http://asterisk.hosting.lv/bin/codec_g729-ast170-gcc4-glibc-x86_64-core2.so<br/>
 cp codec_g729-ast170-gcc4-glibc-x86_64-core2.so /usr/lib/asterisk/modules/codec_g729.so<br/>
 chmod  +x /usr/lib/asterisk/modules/codec_g729.so<br/>
 asterisk -rx "module load codec_g729.so"<br/>
