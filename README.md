@@ -59,7 +59,7 @@ cd kamailio<br/>
 git checkout -b 5.4 origin/5.4<br/>
 make cfg<br/>
 nano src/modules.lst<br/>
-include_modules = db_mysql tls dialplan dmq xmlops regex websocket json jansson pua pua_dialoginfo presence presence_xml presence_dialoginfo ndb_redis lcr http_client evapi<br/>
+include_modules = db_mysql tls dialplan dmq xmlops regex websocket json jansson pua pua_dialoginfo presence presence_xml presence_dialoginfo ndb_redis lcr http_client evapi crypto<br/>
 make all<br/>
 make install<br/>
 <br/>
